@@ -50,7 +50,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
@@ -61,33 +61,58 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-总结" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-js技术总结---BOM" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/02/05/总结/" class="article-date">
-  <time datetime="2018-02-05T07:01:16.000Z" itemprop="datePublished">2018-02-05</time>
+    <a href="/2018/02/05/js技术总结---BOM/" class="article-date">
+  <time datetime="2018-02-05T07:01:16.233Z" itemprop="datePublished">2018-02-05</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/02/05/总结/">总结</a>
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h1 id="js技术总结—-BOM"><a href="#js技术总结—-BOM" class="headerlink" title="js技术总结—-BOM"></a>js技术总结—-BOM</h1><h4 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h4><blockquote>
+<p>DOM是文档对象模型<br>BOM(Browser Object Model)是浏览器对象模型；<br>BOM 是关于浏览器的方法，属性，事件。</p>
+</blockquote>
+<h4 id="常用BOM方法"><a href="#常用BOM方法" class="headerlink" title="常用BOM方法"></a>常用BOM方法</h4><blockquote>
+<ol>
+<li><p>window.open()；打开新的页面<br>参数：<br>(1)代表要打开的新网页的地址；<br>(2)打开方式，是在本页面打开还是另外一个页面打开：<br>  _self    在本窗口打开；<br>  _black    在新窗口打开；<br>  _iframName    在一个网页里面嵌套另一个网页<br>(3)打开新窗口的位置信息。</p>
+</li>
+<li><p>window.close;关闭新的页面<br>不同的浏览器的表象不一样，有的关闭的是它本身的页面，有的关闭的是新打开的页面。</p>
+</li>
+<li><p>window.location—-地址栏信息；<br>字符串版的地址栏信息；</p>
+</li>
+<li><p>BOM的相关尺寸；</p>
+</li>
+</ol>
+<ul>
+<li>可视区的宽和高：<br>window.innerWidth<br>window.innerHeight<br>BOM方法可视区的方法兼容不太好，不兼容低版本的浏览器</li>
+<li>scrollTop    被卷取的页面高度<br>scrollLeft    被卷取的页面宽度</li>
+<li>scrollWidth    实际内容的宽度，不含边框<br>scrollHeight    实际内容的高度，不含边框</li>
+<li>屏幕的宽和高<br>window.screen.height    测量屏幕的高度，不受窗口大小的影响；<br>window.screen.width    测量屏幕的长度，不受窗口大小的影响；</li>
+<li>可利用的宽高<br>window.screen.availHeight<br>window.screen.availWidth</li>
+<li>document相关的宽和高<br>document.body.clientWidth    可利用的宽度，受窗口大小的影响；<br>document.body.clientHeight可利用的高度，受窗口大小的影响；</li>
+<li>获取元素的宽高<br>document.body.offsetWidth    获取元素的宽；<br>document.body.offsetHeight获取元素的高。</li>
+</ul>
+<p>滚动条的距离</p>
+<ul>
+<li>DOM：(纵向滚动条)<br>chrom        document.body.scrollTop;<br>其他浏览器     document.documentElement.scrollTop;</li>
+<li>BOM (不考虑低版本可是用这个)<br>window.pageXoffset    横向滚动条<br>window.pageYoffset    纵向滚动条</li>
+<li>设置滚动条的距离<br>window.scrollTo(x,y)<br>这个方法是全兼容，两个参数必须同时出现。</li>
+</ul>
+<p>滚轮事件</p>
+<ul>
+<li>window.onscroll();<br>当滚动条滚动的时候触发这个方法；<br>它会按照一定的频率来触发，不同的浏览器频率是不一样的，滚动的频率也是不一样的；<br>并不是滚动一下就是一像素，有的浏览器频率高，有的频率低；</li>
+<li>window.onresize();<br>当窗口改变大小的时候触发这个方法。</li>
+</ul>
+</blockquote>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/05/总结/" data-id="cjdb36p730001fgxkxdc0lx7z" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/02/05/js技术总结---BOM/" data-id="cjdcg0xm70000d0xk8a0rhkkj" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -123,26 +148,48 @@ nodeType:节点类型 (返回节点的类型)；
 nodeValue:节点值；
 </code></pre></blockquote>
 <h4 id="常用节点："><a href="#常用节点：" class="headerlink" title="常用节点："></a>常用节点：</h4><blockquote>
-<p>previousElementSibling<br>找到上一个兄弟节点；</p>
-<p>nextElementSibling<br>找到下一个兄弟节点；</p>
-<p>父级.firstElementChild:<br>找到第一个子节点；</p>
-<p>父级.lastElementChild;<br>找到最后一个子节点；</p>
-<p>元素.offsetParent<br>获取离元素最近的有定位的父级；<br>它会一层一层往上找，直到找到最后有定位的父级后就把这个父级返回；<br>如果父级没有定位，那返回body(IE8及其以上返回body，Ie8以下的版本返回html或者它自身);<br>注意：<br>遵循一个原则，没有兼容性，父级一定要给一个定位；<br>body是没有offsetParent的。</p>
-<p>元素.offsetLeft<br>找到元素离最近的有定位的父级的距离，不带单位，并且不带边框；</p>
-<p>元素：offsetTop<br>找到元素最上边距离最近的有定位的父级之间的距离，不带单位，并且不带边框；<br>注意：<br>(1)如果没有定位的父级，默认找到的是html的距离，而不是body的距离；<br>(2)同样会有兼容性问题；<br>(3)遵循一个原则：1.给父级定位；2.如果没有定位，一开始就把默认的样式去掉。</p>
-<p>createElemrnt<br>创建元素，通过标签名的形式来创建一个元素<br>语法：<br>document.createElement(tagName);<br>createElement前面的主语只能是document;<br>注意：<br>只能创建元素节点，不能创建文本节点、注释节点；<br>创建后的标签可以对它进行任何操作。</p>
-<p>appendChild<br>添加元素，往父节点里边添加一个元素<br>它是添加到父节点的最后面；<br>语法：<br>父节点.appengChild(chilsNode);<br>参数：<br>子元素，一般为用createElement创建后的节点；<br>注意：<br>只能添加标签节点，不能添加其他节点；</p>
-<p>cloneNode<br>克隆一个节点；<br>语法：<br>要克隆的节点.cloneNode(boolear)<br>参数：<br>true        克隆元素和元素包含的它的所有的子孙节点；<br>false        克隆元素但是不包含它的子孙节点;</p>
-<p>removeChild<br>移除元素，从父级里移除指定的元素；<br>语法：<br>父级.removeChild(childNode);<br>返回值：<br>返回被删除的那个元素；    切记要从父级删除子级</p>
-<p>getBoundingClientRect<br>获取到元素盒模型的一些信息，得到的结果是没有单位的，并且不包含滚动条的距离；<br>DOM的位置信息都是不带单位的，eg:offsetLeft、offsetTop、offsetWidth、offsetHeight</p>
-<p>getAttribute<br>获取元素的属性；<br>语法：元素.getAttribute(‘属性名’)<br>注意：<br>如果参数是src或者href的话，那它取到的结果就是引号里边的值(相对地址)<br>它取不到js的自定义属性，但是可以取到html的自定义属性.</p>
-<p>setAttribute<br>设置元素的属性；<br>语法：元素.setAttribute(attr,value);<br>参数：<br>attr(要指定的属性)<br>value(要定义的属性)<br>两个参数必须同时出现，中间用逗号隔开<br>返回值：<br>返回所有有自定义属性及属性值的html标签</p>
-<p>removeAttribute<br>删除属性<br>语法：元素.removeAttribute(‘属性名’)；<br>js中class是保留字，是不能用的，要用className</p>
-<p>获取元素的宽高<br>getConputedStyle()</p>
-<p>元素.offsetWidth<br>返回元素的宽度，含边框，不带单位，带padding、border<br>元素.clientWidth<br>返回元素的宽度，不含边框，不带单位、带padding<br>元素.offsetHeight<br>返回元素的高度，含边框<br>元素.clientHeight<br>返回元素的宽度，含边框，获取到的数据不带单位、带padding</p>
-<p>可视区的宽高<br>宽：document.documentElement.clientWidth;<br>高：document.documentElement.clientHeight;<br>它的值会随着可视区的宽和高的变化而变化。</p>
-<p>insertbefore<br>插入元素，把第一个参数插入到第二个参数的前面<br>语法：<br>父级.insertbefore(childNode1,childNode2);<br>参数：<br>childNode1    要插入的元素；<br>childNode2    决定childNode1插入的位置；<br>连个参数必须同时存在，否则就会报错；<br>第二个参数如果为null或者underfind的时候，insertbefore的作用就相当于appendChild，不会报错<br>返回值：<br>返回要插入的元素(第一个参数)</p>
-<p>replaceChild<br>替换元素，用第一个元素替换第二个元素；<br>语法：<br>父级.replaceChild(node,childNode);<br>参数：<br>node：        要替换的元素；<br>childNode    被替换的元素，<br>连个参数必须同时出行，不然会报错<br>返回值：<br>返回被替换的那个元素(第二个元素)<br>注意：<br>用父级里的元素去替换另一个元素；<br>替换的那个元素会跑到被替换的元素的位置；<br>被替换的那个元素会被删除</p>
+<ol>
+<li><p>previousElementSibling<br>找到上一个兄弟节点；</p>
+</li>
+<li><p>nextElementSibling<br>找到下一个兄弟节点；</p>
+</li>
+<li><p>父级.firstElementChild:<br>找到第一个子节点；</p>
+</li>
+<li><p>父级.lastElementChild;<br>找到最后一个子节点；</p>
+</li>
+<li><p>元素.offsetParent<br>获取离元素最近的有定位的父级；<br>它会一层一层往上找，直到找到最后有定位的父级后就把这个父级返回；<br>如果父级没有定位，那返回body(IE8及其以上返回body，Ie8以下的版本返回html或者它自身);<br>注意：<br>遵循一个原则，没有兼容性，父级一定要给一个定位；<br>body是没有offsetParent的。</p>
+</li>
+<li><p>元素.offsetLeft<br>找到元素离最近的有定位的父级的距离，不带单位，并且不带边框；</p>
+</li>
+<li><p>元素：offsetTop<br>找到元素最上边距离最近的有定位的父级之间的距离，不带单位，并且不带边框；<br>注意：<br>(1)如果没有定位的父级，默认找到的是html的距离，而不是body的距离；<br>(2)同样会有兼容性问题；<br>(3)遵循一个原则：1.给父级定位；2.如果没有定位，一开始就把默认的样式去掉。</p>
+</li>
+<li><p>createElemrnt<br>创建元素，通过标签名的形式来创建一个元素<br>语法：<br>document.createElement(tagName);<br>createElement前面的主语只能是document;<br>注意：<br>只能创建元素节点，不能创建文本节点、注释节点；<br>创建后的标签可以对它进行任何操作。</p>
+</li>
+<li><p>appendChild<br>添加元素，往父节点里边添加一个元素<br>它是添加到父节点的最后面；<br>语法：<br>父节点.appengChild(chilsNode);<br>参数：<br>子元素，一般为用createElement创建后的节点；<br>注意：<br>只能添加标签节点，不能添加其他节点；</p>
+</li>
+<li><p>cloneNode<br>克隆一个节点；<br>语法：<br>要克隆的节点.cloneNode(boolear)<br>参数：<br>true        克隆元素和元素包含的它的所有的子孙节点；<br>false        克隆元素但是不包含它的子孙节点;</p>
+</li>
+<li><p>removeChild<br>移除元素，从父级里移除指定的元素；<br>语法：<br>父级.removeChild(childNode);<br>返回值：<br>返回被删除的那个元素；    切记要从父级删除子级</p>
+</li>
+<li><p>getBoundingClientRect<br>获取到元素盒模型的一些信息，得到的结果是没有单位的，并且不包含滚动条的距离；<br>DOM的位置信息都是不带单位的，eg:offsetLeft、offsetTop、offsetWidth、offsetHeight</p>
+</li>
+<li><p>getAttribute<br>获取元素的属性；<br>语法：元素.getAttribute(‘属性名’)<br>注意：<br>如果参数是src或者href的话，那它取到的结果就是引号里边的值(相对地址)<br>它取不到js的自定义属性，但是可以取到html的自定义属性.</p>
+</li>
+<li><p>setAttribute<br>设置元素的属性；<br>语法：元素.setAttribute(attr,value);<br>参数：<br>attr(要指定的属性)<br>value(要定义的属性)<br>两个参数必须同时出现，中间用逗号隔开<br>返回值：<br>返回所有有自定义属性及属性值的html标签</p>
+</li>
+<li><p>removeAttribute<br>删除属性<br>语法：元素.removeAttribute(‘属性名’)；<br>js中class是保留字，是不能用的，要用className</p>
+</li>
+<li><p>获取元素的宽高<br>getConputedStyle()</p>
+</li>
+<li><p>元素.offsetWidth<br>返回元素的宽度，含边框，不带单位，带padding、border<br>元素.clientWidth<br>返回元素的宽度，不含边框，不带单位、带padding<br>元素.offsetHeight<br>返回元素的高度，含边框<br>元素.clientHeight<br>返回元素的宽度，含边框，获取到的数据不带单位、带padding</p>
+</li>
+<li><p>可视区的宽高<br>宽：document.documentElement.clientWidth;<br>高：document.documentElement.clientHeight;<br>它的值会随着可视区的宽和高的变化而变化。</p>
+</li>
+<li><p>insertbefore<br>插入元素，把第一个参数插入到第二个参数的前面<br>语法：<br>父级.insertbefore(childNode1,childNode2);<br>参数：<br>childNode1    要插入的元素；<br>childNode2    决定childNode1插入的位置；<br>连个参数必须同时存在，否则就会报错；<br>第二个参数如果为null或者underfind的时候，insertbefore的作用就相当于appendChild，不会报错<br>返回值：<br>返回要插入的元素(第一个参数)</p>
+</li>
+<li><p>replaceChild<br>替换元素，用第一个元素替换第二个元素；<br>语法：<br>父级.replaceChild(node,childNode);<br>参数：<br>node：        要替换的元素；<br>childNode    被替换的元素，<br>连个参数必须同时出行，不然会报错<br>返回值：<br>返回被替换的那个元素(第二个元素)<br>注意：<br>用父级里的元素去替换另一个元素；<br>替换的那个元素会跑到被替换的元素的位置；<br>被替换的那个元素会被删除</p>
+</li>
+</ol>
 </blockquote>
 <h4 id="innerHTML和DOM的区别"><a href="#innerHTML和DOM的区别" class="headerlink" title="innerHTML和DOM的区别"></a>innerHTML和DOM的区别</h4><blockquote>
 <p>innerHTML：会把原来的内容清空，再添加新的内容，而被添加的原来的内容已经没有了。<br>DOM方法：会把新的内容追加到原来的内容里边，原来的内容做具有的事件依然会在，不会受影响。</p>
@@ -151,7 +198,7 @@ nodeValue:节点值；
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/02/05/js技术总结---DOM/" data-id="cjdb36p7b0002fgxk0q1l8nmz" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/02/05/js技术总结---DOM/" data-id="cjdcfzpzq0001z4xk6xxroqvo" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -209,7 +256,7 @@ $(&#39;.three&#39;).click(function(){
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/01/23/Markdown-从入门到精通/" data-id="cjdb36p6t0000fgxkqsa18fui" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/01/23/Markdown-从入门到精通/" data-id="cjdcfzpzu0002z4xkykmz3qh5" class="article-share-link">Teilen</a>
       
       
     </footer>
@@ -235,7 +282,7 @@ $(&#39;.three&#39;).click(function(){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
     </div>
@@ -245,12 +292,12 @@ $(&#39;.three&#39;).click(function(){
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/2018/02/05/总结/">总结</a>
+            <a href="/2018/02/05/js技术总结---BOM/">(no title)</a>
           </li>
         
           <li>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="js技术总结—-BOM导语 DOM是文档对象模型BOM(Browser Object Model)是浏览器对象模型；BOM 是关于浏览器的方法，属性，事件。  常用BOM方法  window.open()；打开新的页面参数：(1)代表要打开的新网页的地址；(2)打开方式，是在本页面打开还是另外一个页面打开：  _self    在本窗口打开；  _black    在新窗口打开；  _iframN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2018/02/05/js技术总结---BOM/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="js技术总结—-BOM导语 DOM是文档对象模型BOM(Browser Object Model)是浏览器对象模型；BOM 是关于浏览器的方法，属性，事件。  常用BOM方法  window.open()；打开新的页面参数：(1)代表要打开的新网页的地址；(2)打开方式，是在本页面打开还是另外一个页面打开：  _self    在本窗口打开；  _black    在新窗口打开；  _iframN">
+<meta property="og:updated_time" content="2018-02-07T02:14:48.891Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="js技术总结—-BOM导语 DOM是文档对象模型BOM(Browser Object Model)是浏览器对象模型；BOM 是关于浏览器的方法，属性，事件。  常用BOM方法  window.open()；打开新的页面参数：(1)代表要打开的新网页的地址；(2)打开方式，是在本页面打开还是另外一个页面打开：  _self    在本窗口打开；  _black    在新窗口打开；  _iframN">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-js技术总结---BOM" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/02/05/js技术总结---BOM/" class="article-date">
+  <time datetime="2018-02-05T07:01:16.233Z" itemprop="datePublished">2018-02-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="js技术总结—-BOM"><a href="#js技术总结—-BOM" class="headerlink" title="js技术总结—-BOM"></a>js技术总结—-BOM</h1><h4 id="导语"><a href="#导语" class="headerlink" title="导语"></a>导语</h4><blockquote>
+<p>DOM是文档对象模型<br>BOM(Browser Object Model)是浏览器对象模型；<br>BOM 是关于浏览器的方法，属性，事件。</p>
+</blockquote>
+<h4 id="常用BOM方法"><a href="#常用BOM方法" class="headerlink" title="常用BOM方法"></a>常用BOM方法</h4><blockquote>
+<ol>
+<li><p>window.open()；打开新的页面<br>参数：<br>(1)代表要打开的新网页的地址；<br>(2)打开方式，是在本页面打开还是另外一个页面打开：<br>  _self    在本窗口打开；<br>  _black    在新窗口打开；<br>  _iframName    在一个网页里面嵌套另一个网页<br>(3)打开新窗口的位置信息。</p>
+</li>
+<li><p>window.close;关闭新的页面<br>不同的浏览器的表象不一样，有的关闭的是它本身的页面，有的关闭的是新打开的页面。</p>
+</li>
+<li><p>window.location—-地址栏信息；<br>字符串版的地址栏信息；</p>
+</li>
+<li><p>BOM的相关尺寸；</p>
+</li>
+</ol>
+<ul>
+<li>可视区的宽和高：<br>window.innerWidth<br>window.innerHeight<br>BOM方法可视区的方法兼容不太好，不兼容低版本的浏览器</li>
+<li>scrollTop    被卷取的页面高度<br>scrollLeft    被卷取的页面宽度</li>
+<li>scrollWidth    实际内容的宽度，不含边框<br>scrollHeight    实际内容的高度，不含边框</li>
+<li>屏幕的宽和高<br>window.screen.height    测量屏幕的高度，不受窗口大小的影响；<br>window.screen.width    测量屏幕的长度，不受窗口大小的影响；</li>
+<li>可利用的宽高<br>window.screen.availHeight<br>window.screen.availWidth</li>
+<li>document相关的宽和高<br>document.body.clientWidth    可利用的宽度，受窗口大小的影响；<br>document.body.clientHeight可利用的高度，受窗口大小的影响；</li>
+<li>获取元素的宽高<br>document.body.offsetWidth    获取元素的宽；<br>document.body.offsetHeight获取元素的高。</li>
+</ul>
+<p>滚动条的距离</p>
+<ul>
+<li>DOM：(纵向滚动条)<br>chrom        document.body.scrollTop;<br>其他浏览器     document.documentElement.scrollTop;</li>
+<li>BOM (不考虑低版本可是用这个)<br>window.pageXoffset    横向滚动条<br>window.pageYoffset    纵向滚动条</li>
+<li>设置滚动条的距离<br>window.scrollTo(x,y)<br>这个方法是全兼容，两个参数必须同时出现。</li>
+</ul>
+<p>滚轮事件</p>
+<ul>
+<li>window.onscroll();<br>当滚动条滚动的时候触发这个方法；<br>它会按照一定的频率来触发，不同的浏览器频率是不一样的，滚动的频率也是不一样的；<br>并不是滚动一下就是一像素，有的浏览器频率高，有的频率低；</li>
+<li>window.onresize();<br>当窗口改变大小的时候触发这个方法。</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/02/05/js技术总结---BOM/" data-id="cjdcg0xm70000d0xk8a0rhkkj" class="article-share-link">Teilen</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/02/05/js技术总结---DOM/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archiv</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">January 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">letzter Beitrag</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/02/05/js技术总结---BOM/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/02/05/js技术总结---DOM/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/01/23/Markdown-从入门到精通/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
